@@ -1,0 +1,132 @@
+/* styles/home.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right,#f0f3f5);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade + Slide Down Animation */
+@keyframes fadeSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.homepage-container {
+  text-align: center;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.main-heading {
+  font-size: 36px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* {
+  font-size: 36px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+} */
+
+.brand {
+  /* color: #007bff; */
+   /* background: linear-gradient(180deg, #007bff, #00c6ff, #28a745); */
+   background:#555;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtext {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 250px;
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #eee;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  color: #2c3e50;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.login-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+  border-left: 5px solid #007bff;
+}
+
+.register-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(40, 167, 69, 0.3);
+  border-left: 5px solid #28a745;
+}
+
+.email-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgb(192, 189, 13);
+  border-left: 5px solid #efff0e;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Gradient Title Heading */
+.page-title {
+  font-size: 78px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  background: linear-gradient(180deg, #007bff, #00c6ff, #28a745);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeSlideDown 0.1s ease-in-out;
+  transition: text-shadow 0.3s ease-in-out;
+  -webkit-animation: fadeSlideDown 0.1s ease-in-out;
+}
+
+.vault-desc {
+  font-size: 16px;
+  color: #555;
+  max-width: 600px;
+  margin: 15px auto 30px;
+  text-align: center;
+  line-height: 1.6;
+  /* animation: fadeIn 0.1s ease-in-out 2.5s forwards;
+  -webkit-animation: fadeIn 0.1s ease-in-out 2.5s forwards;
+  opacity: 0; */
+}

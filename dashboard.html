@@ -1,0 +1,52 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - SecureShareDocs</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <h1>Welcome to Your Secure Dashboard🙏</h1>
+  
+  <div id="userProfile">
+    <p><strong>User:</strong> <span id="userPhone"></span></p>
+    <a href="index.html"><button onclick="logout()">Logout</button></a>
+    <!-- Add below the logout button -->
+    <div id="myProfileSection">
+        <h2>My Profile</h2>
+        <input type="text" id="profileName" placeholder="Enter Name" />
+        <input type="email" id="profileEmail" placeholder="Enter Email" />
+        <input type="file" id="profilePhoto" />
+        <button onclick="updateProfile()">Update Profile</button>
+
+        <div id="profilePreview">
+            <p><strong>Name:</strong> <span id="displayName"></span></p>
+            <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+            <img id="displayPhoto" src="" alt="Profile Photo" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%;" />
+        </div>
+        </div>
+  </div>
+
+  <hr>
+
+  <!-- Document Upload -->
+  <h2>Upload a Document</h2>
+  <input type="file" id="fileInput" />
+  <button onclick="uploadDocument()">Upload</button>
+
+  <!-- Uploaded Docs -->
+  <h2>Your Documents</h2>
+  <ul id="docList"></ul>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"></script>
+
+ 
+  <script src="documents.js"></script>
+  <script src="log.js"></script>
+  <script src="profile.js"></script>
+</body>
+</html>
